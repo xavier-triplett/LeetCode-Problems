@@ -1,0 +1,29 @@
+176. Second Highest Salary
+
+Question:
+
+Write a SQL query to get the second highest salary from the Employee table.
+
++----+--------+
+| Id | Salary |
++----+--------+
+| 1  | 100    |
+| 2  | 200    |
+| 3  | 300    |
++----+--------+
+
+For example, given the above Employee table, the query should return 200 as the second highest salary. If there is no second highest salary, then the query should return null.
+
++---------------------+
+| SecondHighestSalary |
++---------------------+
+| 200                 |
++---------------------+
+
+
+
+Answer:
+
+SELECT MAX(e.Salary) AS 'SecondHighestSalary'
+FROM Employee e
+WHERE e.Salary < (SELECT MAX(e2.Salary) FROM Employee e2);
