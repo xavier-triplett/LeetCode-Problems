@@ -22,7 +22,7 @@ For example, given the above Employee table, the query should return 200 as the 
 
 
 
-Answer:
+Solution:
 
 SELECT MAX(e.Salary) AS 'SecondHighestSalary'
 FROM Employee e
